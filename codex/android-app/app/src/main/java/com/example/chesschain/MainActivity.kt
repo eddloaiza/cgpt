@@ -107,7 +107,7 @@ sealed class NavDestination(val route: String, val label: String, val icon: andr
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ChessChainApp() {
-    var activeUser by rememberSaveable { mutableStateOf<User?>(null) }
+    var activeUser by remember { mutableStateOf<User?>(null) }
     val navController = rememberNavController()
 
     if (activeUser == null) {
